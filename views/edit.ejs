@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit profile</title>
+  </head>
+  <body>
+    <h2>Edit your details</h2>
+    <form action="/newuser" method="post">
+      <input type="text" name="user" id="" value="<%=data.user%>" />
+      <input type="email" name="email" id="" value="<%=data.email%>" />
+
+      <button type="submit">Save Changes</button>
+    </form>
+  </body>
+</html>
