@@ -31,6 +31,39 @@
       <br />
       <textarea name="address" id=""><%=data.address%></textarea>
       <br />
+      <span>Gender:</span>
+      <br />
+      <% if(data.gender == "Male") {%>
+      <input type="radio" name="gender" value="Male" checked="checked" />
+      <label for="gender">Male</label>
+      <% } else {%>
+      <input type="radio" name="gender" value="Male" />
+      <label for="gender">Male</label>
+      <% } %> <% if(data.gender == "Female") {%>
+      <input type="radio" name="gender" value="Female" checked="checked" />
+      <label for="gender">Female</label>
+      <% } else {%>
+      <input type="radio" name="gender" value="Female" />
+      <label for="gender">Female</label>
+      <% } %> <% if(data.gender == "Others") {%>
+      <input type="radio" name="gender" value="Others" checked="checked" />
+      <label for="gender">Other</label>
+      <% } else {%>
+      <input type="radio" name="gender" value="Others" />
+      <label for="gender">Other</label>
+      <% } %>
+
+      <br />
+
+      <label for="age">Select Age Group:</label>
+      <select name="age" id="">
+        <option value="5-10" <% if(data.age == "5-10") { %>selected="selected"<%}%> >5-10</option>
+        <option value="11-20" <% if(data.age == "11-20") { %>selected="selected"<%}%> >11-20</option>
+        <option value="21-50" <% if(data.age == "21-50") { %>selected="selected"<%}%> >21-50</option>
+        <option value="51-80" <% if(data.age == "51-80") { %>selected="selected"<%}%> >51-80</option>
+        <option value="81-100" <% if(data.age == "81-100") { %>selected="selected"<%}%> >81-100</option>
+      </select>
+      <br />
 
       <button type="submit">Save Changes</button>
     </form>
