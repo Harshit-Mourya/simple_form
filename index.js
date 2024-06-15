@@ -19,8 +19,8 @@ app.get("/", (req, res) => {
 let data;
 app.post("/newuser", (req, res) => {
   //   console.log(req.body);
-  let { user, email } = req.body;
-  data = { user: user, email: email };
+  let { user, email, phone, address } = req.body;
+  data = { user: user, email: email, phone: phone, address: address };
   res.render("info.ejs", { data });
 });
 
